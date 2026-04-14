@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Porthos — čierny vlčiak zachránený z útulku. Príbeh o reaktívnom psovi ktorý sa naučil dôverovať.">
+    <title>Porthos — môj čierny vlčiak</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- NAVIGÁCIA -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="hlavna-nav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                🐾 Porthos
+            </a>
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#o-porthosovi">O Porthosovi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeria">Galéria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#fakty">Fakty</a></li>
+                    <li class="nav-item"><a class="nav-link" href="o-nas.html">Príbeh</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+                    <li class="nav-item ms-2">
+                        <button class="btn btn-outline-light btn-sm" id="dark-toggle">
+                            🌙 Tmavý režim
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- HERO SEKCIA -->
+        <section class="hero-sekcia d-flex align-items-center">
+            <div class="container text-center text-white">
+                <h1 class="display-3 fw-bold animovany">Vitaj, volám sa Porthos</h1>
+                <p class="lead mb-4 animovany" style="animation-delay:0.2s">
+                    Čierny vlčiak, zachránený, potom v útulku, a potom doma. Reaktívny a plný lásky zároveň.
+                </p>
+                <a href="#o-porthosovi" class="btn btn-porthos btn-lg animovany"
+                   style="animation-delay:0.4s">
+                    Spoznaj ma bližšie
+                </a>
+            </div>
+        </section>
+
+        <!-- O PORTHOSOVI -->
+        <section id="o-porthosovi" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">O Porthosovi</h2>
+                <div class="row align-items-center g-5">
+                    <div class="col-12 col-md-6">
+                        <div class="ratio ratio-4x3 rounded-4 overflow-hidden shadow">
+                            <img src="assets/img/porthos-hlavny.jpg"
+                                 class="object-fit-cover w-100 h-100"
+                                 alt="Porthos — čierny vlčiak">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h3>Kto som?</h3>
+                        <p>
+                            Volám sa Porthos a som čierny vlčiak bez rodokmeňa. Našli ma spolu s ďalšími psíkmi.
+                            Boli sme priviazaní na krátkych reťaziach, ani neviem kde to bolo, ale nemali sme tam ani vodu, ani jedlo. 
+                            Keď nás odtiaľ brali, vonku bolo -17°C.
+                            V útulku som pobudol asi mesiac a potom som išiel domov. Nič som nepoznal a všetko ma vyrušovalo.
+                             Snažil som sa urobiť tam poriadky s kávovarom, ľuďmi za dverami, telefónmi, dokonca aj s tým psom, ktorý na mňa pozeral zo steny a hýbal sa. Vraj zrkadlo.
+                        </p>
+                        <p>
+                            Som reaktívny pes. Na niektoré podnety reagujem intenzívnejšie. Iné psy, cudzí ľudia alebo hlučné prostredie ma dokážu vyviesť
+                            z miery. Potrebujem čas, priestor a hlavne trpezlivosť. Moja gazdinka mi to dopraje, ale niekedy na mňa aj kričí, že Psisko, sa mi to páči viac ako Porthos a ja potom poslúcham.
+                        </p>
+                        <p>
+                            K ľuďom ktorých poznám som veľmi priateľský a láskavý. Nosím im loptičky, alebo iba tak hľadím na to, čo robia. Milujem prechádzky
+                            v prírode, behanie po lese, rád plním príkazy za odmenky a zo všetkého najradšej mám také dve malé dievčatá, ktoré ku nám chodievajú. Učili ma čítať aj prekračovať detské prekážky.
+                            Najviac sa im páči keď vo vzduchu chytám hodenú granulku alebo keď za granulkou utekám po chodbe a potom v správnej chvíli zabrzdím a došmýkam sa až na miesto. Mám to prepočítané aby som nikde nenabúral. 
+                        </p>
+                        <a href="o-nas.html" class="btn btn-porthos mt-2">
+                            Čítaj môj príbeh
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALÉRIA — CAROUSEL -->
+        <section id="galeria" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Galéria</h2>
+
+                <div id="porthosCarousel" class="carousel slide shadow rounded-4 overflow-hidden"
+                     data-bs-ride="carousel">
+
+                    <div class="carousel-indicators">
+                        <button data-bs-target="#porthosCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button data-bs-target="#porthosCarousel" data-bs-slide-to="1"></button>
+                        <button data-bs-target="#porthosCarousel" data-bs-slide-to="2"></button>
+                        <button data-bs-target="#porthosCarousel" data-bs-slide-to="3"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="ratio ratio-16x9">
+                                <img src="assets/img/porthos-1.jpg"
+                                     class="object-fit-cover w-100 h-100" alt="Porthos v lese">
+                            </div>
+                            <div class="carousel-caption">
+                                <h5>V lese sa cítime najlepšie</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="ratio ratio-16x9">
+                                <img src="assets/img/porthos-2.jpg"
+                                     class="object-fit-cover w-100 h-100" alt="Porthos na prechádzke">
+                            </div>
+                            <div class="carousel-caption">
+                                <h5>Každá prechádzka je dobrodružstvo</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="ratio ratio-16x9">
+                                <img src="assets/img/porthos-3.jpg"
+                                     class="object-fit-cover w-100 h-100" alt="Porthos odpočíva">
+                            </div>
+                            <div class="carousel-caption">
+                                <h5>Po dobrej prechádzke si zaslúžim oddych</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="ratio ratio-16x9">
+                                <img src="assets/img/porthos-4.jpg"
+                                     class="object-fit-cover w-100 h-100" alt="Porthos detail">
+                            </div>
+                            <div class="carousel-caption">
+                                <h5>Čierna srsť, zlaté srdce</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" data-bs-target="#porthosCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-target="#porthosCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FAKTY — KARTY -->
+        <section id="fakty" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Pár faktov o mne</h2>
+                <div class="row g-4">
+
+                    <div class="col-12 col-md-6 col-lg-4 animovany">
+                        <div class="card h-100 shadow position-relative">
+                            <span class="badge bg-porthos position-absolute top-0 end-0 m-2">Rasa</span>
+                            <div class="ratio ratio-16x9 overflow-hidden">
+                                <img src="assets/img/fakt-rasa.jpg"
+                                     class="object-fit-cover w-100 h-100" alt="Čierny vlčiak">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Čierny vlčiak</h5>
+                                <p class="card-text">
+                                    Nemecký ovčiak je inteligentné, lojálne a energické plemeno.
+                                    Potrebuje veľa pohybu, mentálnej stimulácie a dôsledný
+                                    ale láskyplný prístup. Nie je to pes pre každého, 
+                                    keď si ho získaš, máš priateľa na celý život.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 animovany" style="animation-delay:0.15s">
+                        <div class="card h-100 shadow position-relative">
+                            <span class="badge bg-porthos position-absolute top-0 end-0 m-2">Povaha</span>
+                            <div class="ratio ratio-16x9 overflow-hidden">
+                                <img src="assets/img/fakt-povaha.jpg"
+                                     class="object-fit-cover w-100 h-100" alt="Porthos a jeho povaha">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Reaktívny ale láskavý</h5>
+                                <p class="card-text">
+                                    Reaktivita nie je agresivita. Porthos reaguje intenzívne
+                                    na niektoré podnety, ale k ľuďom ktorých pozná je
+                                    nežný, hravý a oddaný. Každý deň robí pokroky
+                                    vďaka trpezlivosti a pozitívnemu výcviku.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 animovany" style="animation-delay:0.3s">
+                        <div class="card h-100 shadow position-relative">
+                            <span class="badge bg-porthos position-absolute top-0 end-0 m-2">Záľuby</span>
+                            <div class="ratio ratio-16x9 overflow-hidden">
+                                <img src="assets/img/fakt-zaliby.jpg"
+                                     class="object-fit-cover w-100 h-100" alt="Porthos v prírode">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Príroda a pohyb</h5>
+                                <p class="card-text">
+                                    Porthos miluje dlhé prechádzky v lese, behanie
+                                    a čuchanie každého zaujímavého miesta.
+                                    Ale pomáha aj v starostlivosti o dve bezvládne osoby, svojou láskou, prirodzeným beťárstvom a certifikovanou loptičkovou terapiou.
+                                    Najlepší deň? Ráno v lese, cez deň dohľad nad domácnosťou a večer vo svojom kresle.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- TLAČIDLO — MODAL -->
+                <div class="text-center mt-5">
+                    <button class="btn btn-porthos btn-lg"
+                            data-bs-toggle="modal" data-bs-target="#adoptujModal">
+                        <i class="bi bi-heart-fill"></i> Adoptuj psa z útulku
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <section class="py-5 cta-sekcia text-white text-center">
+            <div class="container">
+                <h2 class="mb-3">Máš reaktívneho psa?</h2>
+                <p class="lead mb-4">
+                    Viem aké to je, každá prechádzka je výzva. Individuálny tréning s trénerom najlepšie pozitív metódou je nevyhnutný aby ste sa navzájom pochopili.
+                </p>
+                <a href="kontakt.html" class="btn btn-light btn-lg">
+                    <i class="bi bi-envelope"></i> Kontaktuj nás
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <strong>🐾 Porthos</strong><br>
+                    <small>Čierny vlčiak</small>
+                </div>
+                <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+                    <a href="index.html" class="footer-link me-3">Domov</a>
+                    <a href="o-nas.html" class="footer-link me-3">Príbeh</a>
+                    <a href="kontakt.html" class="footer-link">Kontakt</a>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <small>&copy; 2025 Porthos. Všetky práva vyhradené.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL — adopcia -->
+    <div class="modal fade" id="adoptujModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="bi bi-heart-fill text-danger"></i> Adoptuj psa z útulku
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Každý rok skončia tisíce psov v útulkoch. Mnohé z nich sú zdravé,
+                        priateľské a túžia po domove. Porthos je jedným z tých šťastných. Komplikovaný, ľúbený, našiel svoju rodinu. Ale mnohí čakajú ešte stále.
+                    </p>
+                    <p>
+                        Ak uvažuješ o adopcii reaktívneho alebo špeciálneho psa —
+                        rada sa s tebou podelím o naše skúsenosti. Adopcia nie je vždy
+                        jednoduchá, ale je to jedna z najkrajších vecí ktorú môžeš urobiť.
+                    </p>
+                    <div class="alert alert-warning">
+                        <i class="bi bi-exclamation-triangle-fill"></i>
+                        <strong> Pred adopciou si over:</strong>
+                        Máš dostatok času, priestoru a trpezlivosti?
+                        Reaktívny pes potrebuje konzistentný prístup a investíciu do výcviku.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Zatvoriť</button>
+                    <a href="kontakt.html" class="btn btn-porthos">
+                        Napíš nám
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="position-fixed bottom-0 end-0 p-3">
+        <div id="uvitaciToast" class="toast align-items-center text-bg-success" role="alert">
+            <div class="d-flex">
+                <div class="toast-body">
+                    🐾 Vitaj na stránke Porthosa!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                        data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

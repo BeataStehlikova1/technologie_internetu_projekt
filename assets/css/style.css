@@ -1,0 +1,211 @@
+/* ══════════════════════════════════════════════
+   PORTHOS — style.css
+   ══════════════════════════════════════════════ */
+
+/* CSS PREMENNÉ — vlastná farebná schéma */
+:root {
+    --bs-primary:       #2c3e50;
+    --bs-primary-rgb:   44, 62, 80;
+    --porthos-farba:    #2c3e50;
+    --porthos-akcent:   #e67e22;
+    --porthos-svetla:   #f8f4ef;
+}
+
+/* ── ZÁKLADNÉ ŠTÝLY ─────────────────────────── */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--porthos-svetla);
+    color: #2c3e50;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ── NAVIGÁCIA ──────────────────────────────── */
+#hlavna-nav {
+    background-color: var(--porthos-farba);
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.85) !important;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--porthos-akcent) !important;
+}
+
+.navbar-toggler {
+    border-color: rgba(255,255,255,0.5);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* ── HERO SEKCIA ────────────────────────────── */
+.hero-sekcia {
+    min-height: 90vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('../img/porthos-hero.jpg') center/cover no-repeat;
+}
+
+/* ── PAGE HEADER ────────────────────────────── */
+.page-header {
+    background-color: var(--porthos-farba);
+    padding: 5rem 0 3rem;
+}
+
+/* ── CTA SEKCIA ─────────────────────────────── */
+.cta-sekcia {
+    background-color: var(--porthos-farba);
+}
+
+/* ── TLAČIDLÁ ───────────────────────────────── */
+.btn-porthos {
+    background-color: var(--porthos-akcent);
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-porthos:hover {
+    background-color: #d35400;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.bg-porthos {
+    background-color: var(--porthos-akcent) !important;
+}
+
+.text-porthos {
+    color: var(--porthos-akcent) !important;
+}
+
+/* ── KARTY ──────────────────────────────────── */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12) !important;
+}
+
+/* ── FOOTER ─────────────────────────────────── */
+footer {
+    background-color: var(--porthos-farba);
+    color: rgba(255,255,255,0.8);
+}
+
+.footer-link {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: var(--porthos-akcent);
+}
+
+/* ── CSS VALIDÁCIA FORMULÁRA ────────────────── */
+.form-control:focus {
+    border-color: var(--porthos-akcent);
+    box-shadow: 0 0 0 0.2rem rgba(230, 126, 34, 0.25);
+}
+
+.form-control:valid {
+    border-color: #198754;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='%23198754' d='M10.28 1.28L3.989 7.575 1.695 5.28A1 1 0 00.28 6.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 1.28z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+}
+
+.form-control:not(:focus):not(:placeholder-shown):invalid {
+    border-color: #dc3545;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='%23dc3545' d='M6 0a6 6 0 100 12A6 6 0 006 0zm0 10.5a.75.75 0 110-1.5.75.75 0 010 1.5zm.75-3.75a.75.75 0 01-1.5 0v-3a.75.75 0 011.5 0v3z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+}
+
+.form-control:not(:focus):not(:placeholder-shown):invalid ~ .invalid-hint {
+    display: block;
+}
+
+.invalid-hint {
+    display: none;
+    font-size: 0.85rem;
+    color: #dc3545;
+    margin-top: 0.25rem;
+}
+
+/* ── ANIMÁCIA — FADEIN ──────────────────────── */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animovany {
+    opacity: 0;
+    animation: fadeIn 0.7s ease forwards;
+}
+
+/* ── DARK MODE ──────────────────────────────── */
+body.dark {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+body.dark .card {
+    background-color: #16213e;
+    color: #e0e0e0;
+}
+
+body.dark .bg-light {
+    background-color: #0f3460 !important;
+}
+
+body.dark .accordion-item {
+    background-color: #16213e;
+    color: #e0e0e0;
+    border-color: #333;
+}
+
+body.dark .accordion-button {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+body.dark .accordion-button:not(.collapsed) {
+    background-color: #0f3460;
+    color: #fff;
+}
+
+body.dark footer {
+    background-color: #0a0a1a;
+}
+
+body.dark .form-control {
+    background-color: #16213e;
+    color: #e0e0e0;
+    border-color: #444;
+}
